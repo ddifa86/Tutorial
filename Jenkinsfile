@@ -6,6 +6,7 @@ pipeline {
         {
             steps{
                 echo "GIT_COMMIT is ${env.GIT_COMMIT}"
+                echo "GIT_COMMIT is ${env.GIT_BRANCH}"
             }            
         }
         stage('Build') {
