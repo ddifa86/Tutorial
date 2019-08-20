@@ -1,3 +1,28 @@
-node {
-    sh 'echo hello world'
+pipeline {
+    agent any
+
+    stages {
+        stage('Init')
+        {
+            steps{
+                echo "GIT_COMMIT is ${env.GIT_COMMIT}"
+                echo "GIT_COMMIT is ${env.GIT_BRANCH}"
+            }            
+        }
+        stage('Build') {
+            steps {
+                echo 'Building..'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Testing..'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying....'
+            }
+        }
+    }
 }
