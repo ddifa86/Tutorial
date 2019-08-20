@@ -1,12 +1,6 @@
 node {
     stage('Ready') {
-        step {
-            powershell 'Write-Output "Step1"'
-        }
-        
-        step {
-            powershell 'Write-Output "Step2"'
-        }
+       powershell 'Write-Output "Step1"'             
     }
 
     stage('Build') {
