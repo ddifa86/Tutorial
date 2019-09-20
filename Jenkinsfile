@@ -13,6 +13,7 @@ pipeline {
             steps {
                 echo 'Building..'
                 build job: 'MozartBuild', parameters: [string(name: 'SelectProject', value: 'All')]
+                echo 'Complete..'
             }
         }  
         stage('Test') {
