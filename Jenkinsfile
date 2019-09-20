@@ -12,8 +12,9 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
+                build job: 'MozartBuild', parameters: [string(name: 'SelectProject', value: 'All')]
             }
-        }
+        }  
         stage('Test') {
             steps {
                 echo 'Testing..'
